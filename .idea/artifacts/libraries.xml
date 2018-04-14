@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact name="libraries">
-    <output-path>$PROJECT_DIR$/target/artifacts/libraries</output-path>
+    <output-path>$PROJECT_DIR$/target/artifacts/plugin/lib</output-path>
     <root id="root">
       <element id="library" level="project" name="sbt: com.itextpdf:itextpdf:5.5.13:jar" />
       <element id="library" level="project" name="sbt: com.jhlabs:filters:2.0.235:jar" />
@@ -86,13 +86,6 @@
       <element id="library" level="project" name="sbt: de.sciss:weblaf-ui:2.1.3:jar" />
       <element id="library" level="project" name="sbt: de.sciss:wolkenpumpe-basic_2.12:2.23.0:jar" />
       <element id="library" level="project" name="sbt: de.sciss:wolkenpumpe-core_2.12:2.23.0:jar" />
-      <element id="library" level="project" name="sbt: io.netty:netty:3.10.6.Final:jar" />
-      <element id="library" level="project" name="sbt: jline:jline:2.14.6:jar" />
-      <element id="library" level="project" name="sbt: junit:junit:4.8.2:jar" />
-      <element id="library" level="project" name="sbt: lucene:lucene:1.4.3:jar" />
-      <element id="library" level="project" name="sbt: net.databinder.dispatch:dispatch-core_2.12:0.12.3:jar" />
-      <element id="library" level="project" name="sbt: net.databinder.dispatch:dispatch-json4s-native_2.12:0.12.3:jar" />
-      <element id="library" level="project" name="sbt: net.htmlparser.jericho:jericho-html:3.3:jar" />
       <element id="library" level="project" name="sbt: net.sourceforge.jtransforms:jtransforms:2.4.0:jar" />
       <element id="library" level="project" name="sbt: org.jcraft:jorbis:0.0.17:jar" />
       <element id="library" level="project" name="sbt: org.jflac:jflac-codec:1.5.2:jar" />
@@ -102,10 +95,6 @@
       <element id="library" level="project" name="sbt: org.json4s:json4s-core_2.12:3.5.1:jar" />
       <element id="library" level="project" name="sbt: org.json4s:json4s-native_2.12:3.5.1:jar" />
       <element id="library" level="project" name="sbt: org.json4s:json4s-scalap_2.12:3.5.1:jar" />
-      <element id="library" level="project" name="sbt: org.ow2.asm:asm-analysis:5.0.3:jar" />
-      <element id="library" level="project" name="sbt: org.ow2.asm:asm-tree:5.0.3:jar" />
-      <element id="library" level="project" name="sbt: org.ow2.asm:asm-util:5.0.3:jar" />
-      <element id="library" level="project" name="sbt: org.ow2.asm:asm:5.0.3:jar" />
       <element id="library" level="project" name="sbt: org.parboiled:parboiled-core:1.1.7:jar" />
       <element id="library" level="project" name="sbt: org.parboiled:parboiled-java:1.1.7:jar" />
       <element id="library" level="project" name="sbt: org.pegdown:pegdown:1.6.0:jar" />
@@ -114,13 +103,7 @@
       <element id="library" level="project" name="sbt: org.scala-lang.modules:scala-parser-combinators_2.12:1.0.4:jar" />
       <element id="library" level="project" name="sbt: org.scala-lang.modules:scala-swing_2.12:2.0.3:jar" />
       <element id="library" level="project" name="sbt: org.scala-lang.modules:scala-xml_2.12:1.0.6:jar" />
-      <element id="library" level="project" name="sbt: org.scala-lang:scala-compiler:2.12.5:jar" />
-      <element id="library" level="project" name="sbt: org.scala-lang:scala-library:2.12.5:jar" />
-      <element id="library" level="project" name="sbt: org.scala-lang:scala-reflect:2.12.5:jar" />
       <element id="library" level="project" name="sbt: org.scala-stm:scala-stm_2.12:0.8:jar" />
-      <element id="library" level="project" name="sbt: org.slf4j:slf4j-api:1.7.24:jar" />
-      <element id="library" level="project" name="sbt: org.slf4j:slf4j-simple:1.7.24:jar" />
-      <element id="library" level="module" name="sbt: unmanaged-jars" module-name="mellite-idea" />
     </root>
   </artifact>
 </component>
