@@ -5,6 +5,7 @@ lazy val projectVersion     = "0.1.0-SNAPSHOT"
 lazy val ideaVersion        = "181.4445.78"
 lazy val scalaPluginVersion = "2018.1.8"
 lazy val scalaPluginUpdate  = 44474
+lazy val melliteVersion     = "2.21.0"
 
 // somehow this only works when we set it globally
 ideaBuild in ThisBuild := ideaVersion
@@ -20,6 +21,9 @@ lazy val mellitePlugin = project.withId(baseNameL).in(file("."))
   .settings(commonSettings)
   .settings(
     name      := baseName,
+    libraryDependencies ++= Seq(
+      // "de.sciss" %% "mellite" % melliteVersion
+    ),
     // ideaBuild := ideaVersion,
     ideaExternalPlugins +=
       IdeaPlugin.Zip("scala-plugin",

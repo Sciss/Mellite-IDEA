@@ -1,0 +1,30 @@
+<idea-plugin>
+    <id>de.sciss.mellite-idea</id>
+    <name>Mellite</name>
+    <version>0.1.0-SNAPSHOT</version>
+    <vendor url="https://www.sciss.de">Hanns Holger Rutz</vendor>
+
+    <description>Mellite integration with IDEA</description>
+
+    <idea-version since-build="181.0" until-build="182.0"/>
+
+    <depends>org.intellij.scala</depends>
+
+    <application-components>
+    </application-components>
+
+    <project-components>
+    </project-components>
+
+    <!--<extensions defaultExtensionNs="org.intellij.scala">-->
+        <!--<syntheticMemberInjector implementation="org.jetbrains.example.injector.Injector"/>-->
+    <!--</extensions>-->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <projectTemplatesFactory implementation="de.sciss.mellite.idea.MelliteProjectTemplateFactory"/>
+
+        <moduleType id="MELLITE_MODULE" implementationClass="de.sciss.mellite.idea.MelliteModuleType"/>
+        <moduleConfigurationEditorProvider implementation="de.sciss.mellite.idea.MelliteModuleEditorProvider"/>
+    </extensions>
+
+</idea-plugin>

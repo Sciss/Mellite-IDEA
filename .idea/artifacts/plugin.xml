@@ -5,7 +5,7 @@
       <element id="directory" name="lib">
         <element id="archive" name="idea-plugin.jar">
           <element id="artifact" artifact-name="libraries" />
-          <element id="module-output" name="sbt-idea-example" />
+          <element id="module-output" name="mellite-idea" />
         </element>
       </element>
     </root>
