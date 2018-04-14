@@ -19,7 +19,7 @@ import com.intellij.ide.util.projectWizard.ModuleBuilder
 import com.intellij.openapi.module.ModuleType
 import com.intellij.openapi.roots.ModifiableRootModel
 import com.intellij.openapi.util.io.FileUtilRt
-import com.intellij.openapi.vfs.{LocalFileSystem, VirtualFile}
+import com.intellij.openapi.vfs.{LocalFileSystem, VirtualFile, VirtualFileSystem}
 import de.sciss.file._
 import de.sciss.lucre.stm.store.BerkeleyDB
 import de.sciss.synth.proc.Workspace
@@ -58,14 +58,18 @@ class MelliteModuleBuilder extends ModuleBuilder {
 
   private def doSetupRootModel(model: ModifiableRootModel, contentRootDir: File,
                                vContentRootDir: VirtualFile): Unit = {
-
+//    val tpe = vContentRootDir.getFileType
     model.addContentEntry(vContentRootDir)
     val workspaceF  = contentRootDir / s"workspace.${Workspace.ext}"
     val bdbConfig   = BerkeleyDB.Config()
     val bdb         = BerkeleyDB.factory(workspaceF, bdbConfig)
-    val workspace   = Workspace.Durable.empty(workspaceF, bdb)
+    /* val workspace = */ Workspace.Durable.empty(workspaceF, bdb)
 
-//    val module      = model.getModule
+//    val workspaceVF = LocalFileSystem.getInstance.refreshAndFindFileByIoFile(workspaceF)
+//    val tpe = workspaceVF.getFileType
+//    model.addContentEntry(workspaceVF)
+
+    //    val module      = model.getModule
 //    val rootPath    = contentRootDir.getCanonicalPath
   }
 }

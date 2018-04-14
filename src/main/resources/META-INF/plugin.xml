@@ -23,6 +23,10 @@
     <extensions defaultExtensionNs="com.intellij">
         <projectTemplatesFactory implementation="de.sciss.mellite.idea.MelliteProjectTemplateFactory"/>
 
+        <fileTypeFactory implementation="de.sciss.mellite.idea.MelliteFileTypeFactory"/>
+
+        <fileEditorProvider implementation="de.sciss.mellite.idea.MelliteFileEditorProvider"/>
+
         <moduleType id="MELLITE_MODULE" implementationClass="de.sciss.mellite.idea.MelliteModuleType"/>
         <moduleConfigurationEditorProvider implementation="de.sciss.mellite.idea.MelliteModuleEditorProvider"/>
     </extensions>

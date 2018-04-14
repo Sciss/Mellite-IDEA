@@ -29,7 +29,8 @@ class MelliteModuleType extends ModuleType[MelliteModuleBuilder]("MELLITE_MODULE
 }
 
 object MelliteModuleType {
+  val instance = new MelliteModuleType
+
   // XXX TODO --- why use reflection here?
-  val instance: MelliteModuleType =
-    Class.forName("de.sciss.mellite.idea.MelliteModuleType").newInstance.asInstanceOf[MelliteModuleType]
+//    Class.forName("de.sciss.mellite.idea.MelliteModuleType").newInstance.asInstanceOf[MelliteModuleType]
 }
