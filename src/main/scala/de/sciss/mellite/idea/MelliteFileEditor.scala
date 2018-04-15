@@ -1,6 +1,5 @@
 package de.sciss.mellite.idea
 
-import java.awt.EventQueue
 import java.beans.PropertyChangeListener
 
 import com.intellij.codeHighlighting.BackgroundEditorHighlighter
@@ -10,24 +9,20 @@ import com.intellij.util.EventDispatcher
 import de.sciss.desktop.UndoManager
 import de.sciss.lucre.stm
 import de.sciss.lucre.synth.Sys
-import de.sciss.mellite.gui.FolderView
+import de.sciss.mellite.gui.FolderEditorView
 import de.sciss.synth.proc.Workspace
 import javax.swing.JComponent
-
-import scala.swing.Label
 
 class MelliteFileEditor[S <: Sys[S]]()(implicit ws: Workspace[S])
   extends UserDataHolderBase with FileEditor {
 
-  private[this] val disp = EventDispatcher.create(classOf[PropertyChangeListener])
-
-  private[this] val c = new Label("FOO BAR " + EventQueue.isDispatchThread)
+  private[this] val dispatcher = EventDispatcher.create(classOf[PropertyChangeListener])
 
   private[this] implicit val cursor: stm.Cursor[S] = ws.cursor
 
   private[this] val folderView = cursor.step { implicit tx =>
     implicit val undo: UndoManager = UndoManager()
-    FolderView[S](ws.root)
+    FolderEditorView[S](ws.root)
   }
 
   def getComponent: JComponent = folderView.component.peer
@@ -45,10 +40,10 @@ class MelliteFileEditor[S <: Sys[S]]()(implicit ws: Workspace[S])
   def deselectNotify(): Unit = ()
 
   def addPropertyChangeListener(listener: PropertyChangeListener): Unit =
-    disp.addListener(listener)
+    dispatcher.addListener(listener)
 
   def removePropertyChangeListener(listener: PropertyChangeListener): Unit =
-    disp.removeListener(listener)
+    dispatcher.removeListener(listener)
 
   def getBackgroundHighlighter: BackgroundEditorHighlighter = null
 
